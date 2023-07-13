@@ -11,6 +11,10 @@ jobs:
       - browser-tools/install-browser-tools
       - node/install-packages
       - run:
+          command: node --version
+      - run:
+          command: npm --version
+      - run:
           command: npm run test
       - store_test_results:
           path: /tmp/test-results/testcafe/results.xml
